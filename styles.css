@@ -110,7 +110,7 @@ body::-webkit-scrollbar {
 }
 
 .nav-button:hover {
-    border: 3px solid rgba(143, 238, 102, 0.80);
+    border: 3px solid rgba(143, 238, 102, 0.30);
     background: #6BE935;
 }
 
@@ -133,7 +133,6 @@ body::-webkit-scrollbar {
     font-style: normal;
     font-weight: 200;
     line-height: 125%;
-    /* 80px */
     opacity: 0.9;
     background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.40) 100%);
     background-clip: text;
@@ -148,11 +147,8 @@ body::-webkit-scrollbar {
     font-style: normal;
     font-weight: 200;
     line-height: 125%;
-    /* 80px */
     opacity: 0.9;
     color: #78FF39;
-
-    /* Desktop/Heading/H1 */
     font-family: Outfit;
     font-size: 64px;
     font-style: normal;
@@ -195,7 +191,7 @@ body::-webkit-scrollbar {
     line-height: 24px;
     transition: all 0.3s ease-in-out;
 
-    margin-top: 3rem;
+    margin-top: 48px;
     cursor: pointer;
 }
 
@@ -206,9 +202,9 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     border-radius: 4px;
-    border: 3px solid rgba(143, 238, 102, 0.70);
+    /* border: 3px solid rgba(143, 238, 102, 0.70); */
     background: linear-gradient(180deg, #A4F183 0%, #3FA512 100%);
-    box-shadow: 0px -4px 4px 0px #4ABB1A inset, 0px 4px 4px 0px rgba(255, 255, 255, 0.25) inset, 0px 0px 18px 4px rgba(143, 238, 102, 0.45);
+    box-shadow: 0px -4px 4px 0px #4ABB1A inset, 0px 4px 4px 0px rgba(255, 255, 255, 0.25) inset, 0px 0px 18px 4px rgba(143, 238, 102, 0.45),0 0 0 1px rgba(143, 238, 102, 0.70), 0 0 0 2px rgba(143, 238, 102, 0.70);;
 }
 
 .hero-logos-container {
