@@ -311,9 +311,7 @@
       </div>
       <div class="section-two standard-width">
         <div class="section-two-col-right">
-          <div class="section-two-img-holder">
-            <!-- <img src="./img/imagetwo.png" alt="" /> -->
-            <div id="animation-one-container"></div>
+          <div id="animation-one-container" class="section-two-img-holder">
             <script>
               var animation = bodymovin.loadAnimation({
                 container: document.getElementById("animation-one-container"),
@@ -354,8 +352,16 @@
           </ul>
         </div>
         <div class="section-two-col-left">
-          <div class="section-two-img-holder">
-            <img src="./img/iamgeRight.png" alt="" />
+          <div class="section-two-img-holder" id="animation-two-container">
+            <script>
+              var animation = bodymovin.loadAnimation({
+                container: document.getElementById("animation-two-container"),
+                path: "animation2.json",
+                render: "svg",
+                loop: true,
+                autoplau: true,
+              });
+            </script>
           </div>
           <h4>Build cross-chain dApps</h4>
           <p>
