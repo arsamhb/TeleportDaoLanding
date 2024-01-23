@@ -6,24 +6,8 @@
   lang="en"
 >
   <head>
-    <meta charset="utf-8" />
-    <title>TeleportDAO</title>
-    <meta
-      content="Trustless Interoperability Protocol width=device-width, initial-scale=1.0"
-      name="description"
-    />
-    <meta content="TeleportDAO" property="og:title" />
-    <meta
-      content="Trustless Interoperability Protocol"
-      property="og:description"
-    />
-    <meta content="TeleportDAO" property="twitter:title" />
-    <meta
-      content="Trustless Interoperability Protocol"
-      property="twitter:description"
-    />
-    <meta property="og:type" content="website" />
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <title>TeleportDAO</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
     <title>TeleportDAO</title>
   </head>
@@ -312,17 +297,10 @@
       </div>
       <div class="section-two standard-width">
         <div class="section-two-col-right">
-          <div id="animation-one-container" class="section-two-img-holder">
-            <script>
-              var animation = bodymovin.loadAnimation({
-                container: document.getElementById("animation-one-container"),
-                path: "animation3.json",
-                render: "svg",
-                loop: true,
-                autoplau: true,
-              });
-            </script>
-          </div>
+          <div
+            id="animation-one-container"
+            class="section-two-img-holder"
+          ></div>
           <h4>Trustless connection</h4>
           <p>
             TeleportDAO is a light-client bridge which is the most secure
@@ -353,17 +331,10 @@
           </ul>
         </div>
         <div class="section-two-col-left">
-          <div class="section-two-img-holder" id="animation-two-container">
-            <script>
-              var animation = bodymovin.loadAnimation({
-                container: document.getElementById("animation-two-container"),
-                path: "animation2.json",
-                render: "svg",
-                loop: true,
-                autoplau: true,
-              });
-            </script>
-          </div>
+          <div
+            class="section-two-img-holder"
+            id="animation-two-container"
+          ></div>
           <h4>Build cross-chain dApps</h4>
           <p>
             TeleportDAO provides the most recent data of other blockchains for
@@ -1802,6 +1773,20 @@
     </footer>
   </body>
   <script>
+    var animation = bodymovin.loadAnimation({
+      container: document.getElementById("animation-one-container"),
+      path: "animation4.json",
+      render: "svg",
+      loop: true,
+      autoplau: true,
+    });
+    var animation = bodymovin.loadAnimation({
+      container: document.getElementById("animation-two-container"),
+      path: "animation2.json",
+      render: "svg",
+      loop: true,
+      autoplau: true,
+    });
     document
       .getElementById("burger-button")
       .addEventListener("click", function () {
