@@ -92,28 +92,26 @@ body::-webkit-scrollbar {
 
 .nav-button {
     display: flex;
-    padding: 10px 16px;
+    padding: 8px 14px;
     justify-content: center;
     align-items: center;
     gap: 6px;
     border-radius: 4px;
     background: #8FEE66;
-    border: none;
+    border: 3px solid #8FEE66;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     color: #121212;
     font-family: Outfit;
     font-size: 16px;
+    font-style: normal;
     font-weight: 400;
     line-height: 150%;
 }
 
 .nav-button:hover {
-    background: #3B7A1F;
-    color: #FFF;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    border: 3px solid rgba(143, 238, 102, 0.80);
+    background: #6BE935;
 }
 
 .hero {
@@ -862,6 +860,14 @@ body::-webkit-scrollbar {
     cursor: pointer;
 }
 
+.social-media-logo-container>div>svg>path {
+    transition: all 0.3s ease-in-out;
+}
+
+.social-media-logo-container>div:hover>svg>path {
+    opacity: 1;
+}
+
 .left-side p {
     color: #737373;
     font-family: Outfit;
@@ -904,6 +910,18 @@ body::-webkit-scrollbar {
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
+    transition: all 0.3s ease-in-out;
+}
+
+.right-side a:hover {
+    color: var(--White, #FFF);
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24px */
+    text-decoration-line: underline;
 }
 
 @media only screen and (max-width: 768px) {
