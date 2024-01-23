@@ -165,12 +165,28 @@ body::-webkit-scrollbar {
     font-style: normal;
     font-weight: 300;
     line-height: 150%;
-
     opacity: 0.8;
 }
 
 .p-text-content.dont-show-on-phone {
     margin-top: 16px;
+}
+
+.hero-green-button-hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 326px;
+    padding: 3px;
+    border-radius: 4px;
+    background: none;
+    transition: all 0.3s ease-in-out;
+    margin-top: 48px;
+    cursor: pointer;
+}
+
+.hero-green-button-hover:hover {
+    background: linear-gradient(180deg, #3FA512 0%, #A4F183 100%);
 }
 
 .hero-green-button {
@@ -189,9 +205,7 @@ body::-webkit-scrollbar {
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
-    transition: all 0.3s ease-in-out;
-
-    margin-top: 48px;
+    transition: all 0.1s ease-in-out;
     cursor: pointer;
 }
 
@@ -204,7 +218,7 @@ body::-webkit-scrollbar {
     border-radius: 4px;
     /* border: 3px solid rgba(143, 238, 102, 0.70); */
     background: linear-gradient(180deg, #A4F183 0%, #3FA512 100%);
-    box-shadow: 0px -4px 4px 0px #4ABB1A inset, 0px 4px 4px 0px rgba(255, 255, 255, 0.25) inset, 0px 0px 18px 4px rgba(143, 238, 102, 0.45),0 0 0 1px rgba(143, 238, 102, 0.70), 0 0 0 2px rgba(143, 238, 102, 0.70);;
+    box-shadow: 0px -4px 4px 0px #4ABB1A inset, 0px 4px 4px 0px rgba(255, 255, 255, 0.25) inset, 0px 0px 18px 4px rgba(143, 238, 102, 0.45);
 }
 
 .hero-logos-container {
@@ -1023,7 +1037,12 @@ body::-webkit-scrollbar {
         line-height: 150%;
     }
 
+    .hero-green-button-hover {
+        width: 100%;
+    }
+
     .hero-green-button {
+        width: 100%;
         padding: var(--spacing-xl, 16px) var(--spacing-4xl, 32px);
         font-size: 16px;
         line-height: 16px;
