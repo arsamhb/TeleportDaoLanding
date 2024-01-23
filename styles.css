@@ -205,7 +205,7 @@ body::-webkit-scrollbar {
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.1s;
     cursor: pointer;
 }
 
@@ -1039,6 +1039,7 @@ body::-webkit-scrollbar {
 
     .hero-green-button-hover {
         width: 100%;
+        margin-top: 1.5rem;
     }
 
     .hero-green-button {
@@ -1046,7 +1047,6 @@ body::-webkit-scrollbar {
         padding: var(--spacing-xl, 16px) var(--spacing-4xl, 32px);
         font-size: 16px;
         line-height: 16px;
-        margin-top: 1.5rem;
     }
 
     .hero-logos-container {
