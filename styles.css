@@ -112,10 +112,12 @@ body::-webkit-scrollbar {
 
 .nav-button:hover {
     background: #6BE935;
+    border-radius: 2px;
 }
 
 .nav-button:before {
     border: 3px solid rgba(143, 238, 102, 0.30);
+    background-color:  rgba(143, 238, 102, 0.30);
     transition: all 0.3s ease-in-out;
     border-radius: 4px;
     width: 138px;
@@ -192,22 +194,18 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 320px;
     height: 56px;
-
     border-radius: 4px;
     border: 1px solid rgba(143, 238, 102, 0.70);
     background: linear-gradient(180deg, #A4F183 0%, #3FA512 100%);
     box-shadow: 0px -4px 4px 0px #4ABB1A inset, 0px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
-
     color: var(--Black, #050505);
     font-size: 22px;
     font-weight: 500;
     line-height: 24px;
     transition: all 0.1s;
     margin-top: 48px;
-
     cursor: pointer;
     position: relative;
 }
@@ -216,10 +214,10 @@ body::-webkit-scrollbar {
     position: absolute;
     z-index: -1;
     content: "";
-    top: -3px;
-    right: -3px;
-    width: 324px;
-    height: 60px;
+    top: -4px;
+    right: -4px;
+    width: 326px;
+    height: 62px;
     opacity: 0;
     border-radius: 4px;
     transition: opacity 0.3s ease-in-out;
