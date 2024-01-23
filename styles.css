@@ -92,26 +92,44 @@ body::-webkit-scrollbar {
 
 .nav-button {
     display: flex;
-    padding: 8px 14px;
     justify-content: center;
     align-items: center;
-    gap: 6px;
+    width: 138px;
+    height: 44px;
     border-radius: 4px;
     background: #8FEE66;
-    border: 3px solid #8FEE66;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     color: #121212;
     font-family: Outfit;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: 150%;
+    position: relative;
+    border: none;
+    outline: none;
 }
 
 .nav-button:hover {
-    border: 3px solid rgba(143, 238, 102, 0.30);
     background: #6BE935;
+}
+
+.nav-button:before {
+    border: 3px solid rgba(143, 238, 102, 0.30);
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+    width: 138px;
+    height: 44px;
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    z-index: 10;
+    opacity: 0;
+    content: "";
+}
+
+.nav-button:hover:before {
+    opacity: 1;
 }
 
 .hero {
@@ -144,8 +162,6 @@ body::-webkit-scrollbar {
     text-align: center;
     font-family: Outfit;
     font-size: 64px;
-    font-style: normal;
-    font-weight: 200;
     line-height: 125%;
     opacity: 0.9;
     color: #78FF39;
@@ -172,43 +188,47 @@ body::-webkit-scrollbar {
     margin-top: 16px;
 }
 
-.hero-green-button-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 326px;
-    padding: 3px;
-    border-radius: 4px;
-    background: none;
-    transition: all 0.3s ease-in-out;
-    margin-top: 48px;
-    cursor: pointer;
-}
-
-.hero-green-button-hover:hover {
-    background: linear-gradient(180deg, #3FA512 0%, #A4F183 100%);
-    box-shadow: 0px -4px 4px 0px #4ABB1A inset, 0px 4px 4px 0px rgba(255, 255, 255, 0.25) inset, 0px 0px 18px 4px rgba(143, 238, 102, 0.45);
-
-}
-
 .hero-green-button {
     display: flex;
-    width: 320px;
-    padding: 16px 32px;
     justify-content: center;
     align-items: center;
+
+    width: 320px;
+    height: 56px;
+
     border-radius: 4px;
     border: 1px solid rgba(143, 238, 102, 0.70);
     background: linear-gradient(180deg, #A4F183 0%, #3FA512 100%);
     box-shadow: 0px -4px 4px 0px #4ABB1A inset, 0px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
+
     color: var(--Black, #050505);
-    font-family: Outfit;
     font-size: 22px;
-    font-style: normal;
     font-weight: 500;
     line-height: 24px;
     transition: all 0.1s;
+    margin-top: 48px;
+
     cursor: pointer;
+    position: relative;
+}
+
+.hero-green-button:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    top: -3px;
+    right: -3px;
+    width: 324px;
+    height: 60px;
+    opacity: 0;
+    border-radius: 4px;
+    transition: opacity 0.3s ease-in-out;
+    background: linear-gradient(180deg, #3FA512 0%, #A4F183 100%);
+    box-shadow: 0px -4px 4px 0px #4ABB1A inset, 0px 4px 4px 0px rgba(255, 255, 255, 0.25) inset, 0px 0px 18px 4px rgba(143, 238, 102, 0.45);
+}
+
+.hero-green-button:hover:before {
+    opacity: 1;
 }
 
 
@@ -999,6 +1019,16 @@ body::-webkit-scrollbar {
         min-width: 90vw;
     }
 
+    .only-background-for-mobile {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        background-image: url('./img/bodybg.png');
+    }
+
     .hero {
         height: auto;
         padding: 3rem 2rem;
@@ -1006,7 +1036,6 @@ body::-webkit-scrollbar {
         min-width: 100vw;
         max-width: 100vw;
         height: 100vh;
-        background-image: url('./img/herogrid.png'), url('./img/bodybg.png');
         background-size: 220%;
     }
 
@@ -1028,16 +1057,15 @@ body::-webkit-scrollbar {
         line-height: 150%;
     }
 
-    .hero-green-button-hover {
-        width: 100%;
-        margin-top: 1.5rem;
+    .hero-green-button {
+        width: 90vw;
+        height: 56px;
+        font-size: 18px;
     }
 
-    .hero-green-button {
-        width: 100%;
-        padding: var(--spacing-xl, 16px) var(--spacing-4xl, 32px);
-        font-size: 16px;
-        line-height: 16px;
+    .hero-green-button:before {
+        width: calc(90vw + 4px);
+        height: 60px;
     }
 
     .hero-logos-container {
