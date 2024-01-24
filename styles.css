@@ -84,10 +84,12 @@ body::-webkit-scrollbar {
     font-weight: 400;
     line-height: 150%;
     transition: all 0.3s ease-in-out;
+    opacity: 0.7;
 }
 
 .navlinks:hover {
     color: #78FF39;
+    opacity: 1;
 }
 
 .nav-button {
@@ -116,12 +118,11 @@ body::-webkit-scrollbar {
 }
 
 .nav-button:before {
-    border: 3px solid rgba(143, 238, 102, 0.30);
     background-color: rgba(143, 238, 102, 0.30);
     transition: all 0.3s ease-in-out;
     border-radius: 4px;
-    width: 138px;
-    height: 44px;
+    width: 144px;
+    height: 50px;
     position: absolute;
     top: -3px;
     right: -3px;
@@ -191,18 +192,6 @@ body::-webkit-scrollbar {
 }
 
 .hero-green-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 320px;
-    height: 56px;
-    border-radius: 4px;
-    border: 1px solid rgba(143, 238, 102, 0.70);
-    outline: none;
-    background: linear-gradient(180deg, #A4F183 0%, #3FA512 100%);
-    box-shadow: 0px -4px 4px 0px #4ABB1A inset, 0px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
-    color: var(--Black, #050505);
-    font-size: 22px;
     color: var(--Black, #050505);
     font-family: Outfit !important;
     font-size: 22px;
@@ -213,32 +202,56 @@ body::-webkit-scrollbar {
     margin-top: 48px;
     cursor: pointer;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: 56px;
+    border-radius: 4px;
+    border: 1px solid #76C654;
+    outline: none;
+    background: linear-gradient(180deg, #A4F183 0%, #3FA512 100%);
+    box-shadow: 0px -4px 4px 0px #4ABB1A inset, 0px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
 }
 
 .hero-green-button:hover {
-    border: 1px solid rgba(143, 238, 102, 0);
+    box-shadow: none;
     outline: none;
+}
+
+.hero-green-button:after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    top: -5px;
+    right: -4.5px;
+    width: 328px;
+    height: 64px;
+    opacity: 0;
+    border-radius: 4px;
+    transition: opacity 0.3s ease-in-out;
+    background: #76C654;
 }
 
 .hero-green-button:before {
     position: absolute;
-    z-index: -1;
+    z-index: -10;
     content: "";
-    top: -4px;
-    right: -4px;
-    width: 326px;
-    height: 62px;
+    top: -5px;
+    right: -4.5px;
+    width: 328px;
+    height: 64px;
     opacity: 0;
     border-radius: 4px;
     transition: opacity 0.3s ease-in-out;
-    background: rgba(143, 238, 102, 0.70);
+    background: #76C654;
     box-shadow: 0px -4px 4px 0px #4ABB1A inset, 0px 4px 4px 0px rgba(255, 255, 255, 0.25) inset, 0px 0px 18px 4px rgba(143, 238, 102, 0.45);
 }
 
+.hero-green-button:hover:after,
 .hero-green-button:hover:before {
     opacity: 1;
 }
-
 
 .hero-logos-container {
     display: flex;
@@ -353,7 +366,7 @@ body::-webkit-scrollbar {
     font-size: 48px;
     font-weight: 500;
     line-height: 125%;
-    background: linear-gradient(136deg, #FFF 0%, #FFF 48.2%, #52525B 89.05%);
+    background: linear-gradient(136deg, #FFF 0%, #FFF 48.2%, #52525B 69.05%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -434,7 +447,9 @@ body::-webkit-scrollbar {
 
 .section-four>h4 {
     color: #FFF;
+    font-family: Outfit;
     font-size: 24px;
+    font-style: normal;
     font-weight: 300;
     line-height: 150%;
 }
@@ -533,6 +548,7 @@ body::-webkit-scrollbar {
     flex-direction: column;
     width: fit-content;
     margin: 0 auto 3rem auto;
+    color: var(--White, #FFF);
 }
 
 .green-one {
@@ -653,7 +669,7 @@ body::-webkit-scrollbar {
         'tileTwo tileTwo    tileCenter  tileFour     tileFour'
         'tileTwo tileTwo    tileThree   tileThree    tileThree'
         'tileTwo tileTwo    tileThree   tileThree    tileThree';
-    gap: 1.5rem;
+    gap: 1.2rem;
     margin: 3rem 0;
     width: 1280px;
     height: 1000px;
@@ -735,7 +751,7 @@ body::-webkit-scrollbar {
         'tileOneP   tileOneP    tileCenterP   tileThreeP    tileThreeP'
         'tileTwoP   tileTwoP    tileTwoP      tileThreeP    tileThreeP'
         'tileTwoP   tileTwoP    tileTwoP      tileThreeP    tileThreeP';
-    gap: 1.5rem;
+    gap: 1.2rem;
     margin: 3rem 0;
     width: 1280px;
     height: 1000px;
@@ -995,6 +1011,21 @@ body::-webkit-scrollbar {
         display: none;
     }
 
+    .navlinks {
+        font-size: 20px;
+    }
+
+    .mobile-menu-logo {
+        position: fixed;
+        top: 7.5vw;
+        left: 7.5vw;
+    }
+
+    .nav-button {
+        margin: auto auto 4rem auto;
+        width: 80vw;
+    }
+
     .opened-menu.isopen {
         display: block;
         position: fixed;
@@ -1076,9 +1107,16 @@ body::-webkit-scrollbar {
         font-size: 18px;
     }
 
+    .hero-green-button:after {
+        width: calc(90vw + 8px);
+        border-radius: 4px;
+    }
+
     .hero-green-button:before {
-        width: calc(90vw + 4px);
-        height: 60px;
+        width: calc(90vw + 8px);
+        z-index: -1;
+        border-radius: 4px;
+        box-shadow: 0px -4px 4px 0px #4ABB1A inset, 0px 4px 4px 0px rgba(255, 255, 255, 0.25) inset, 0px 0px 18px 4px rgba(143, 238, 102, 0.45);
     }
 
     .hero-logos-container {
