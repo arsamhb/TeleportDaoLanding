@@ -207,6 +207,8 @@ body::-webkit-scrollbar {
     align-items: center;
     width: 320px;
     height: 56px;
+    min-height: 56px;
+    max-height: 56px;
     border-radius: 4px;
     border: 1px solid #76C654;
     outline: none;
@@ -793,13 +795,6 @@ body::-webkit-scrollbar {
 }
 
 .outlined-green-dark-button:hover {
-    display: inline-flex;
-    padding: var(--spacing-xl, 16px) var(--spacing-4xl, 32px);
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    border-radius: 4px;
-    border: 1px solid rgba(120, 255, 57, 0.30);
     background: rgba(120, 255, 57, 0.08);
 }
 
@@ -1140,6 +1135,11 @@ body::-webkit-scrollbar {
         gap: 1rem;
     }
 
+    .supporter-chain-container>div>svg{
+        width: 24px;
+        height: 24px;
+    }
+
     .section-two {
         flex-direction: column;
         margin: 56px auto;
@@ -1270,12 +1270,20 @@ body::-webkit-scrollbar {
         margin: 128px 0 64px 0;
     }
 
+    .section-four>img {
+        height: 32px;
+    }
+
     .overley-shadow {
         position: absolute;
         width: 100vw;
         margin-left: 0;
         height: 100%;
         box-shadow: 0px 0px 10px 1000px #050505, inset 0px 0px 30px 30px #050505;
+    }
+
+    .logo-container>img{
+        height: 32px;
     }
 
     .section-five {
@@ -1318,8 +1326,8 @@ body::-webkit-scrollbar {
     }
 
     .green-one {
-        width: 32px;
-        height: 32px;
+        width: 40px;
+        height: 40px;
         padding: 0;
         gap: 0;
         font-size: 18px;
@@ -1390,7 +1398,7 @@ body::-webkit-scrollbar {
         flex-direction: column-reverse;
         align-items: center;
         height: auto;
-        margin-top: 24px;
+        margin: 24px 0;
     }
 
     .tile-img-holder.three,
@@ -1446,6 +1454,11 @@ body::-webkit-scrollbar {
         margin: 0 auto 1.5rem auto;
     }
 
+    .green-one {
+        font-size: 18px;
+    }
+    
+
     .last-section-border-gradient {
         height: auto;
         margin: 64px auto;
@@ -1457,6 +1470,7 @@ body::-webkit-scrollbar {
 
     .last-section>h5 {
         font-family: Outfit;
+        text-align: center;
         font-size: 32px;
         margin-bottom: .5rem;
     }
@@ -1476,6 +1490,11 @@ body::-webkit-scrollbar {
         display: flex;
         gap: 1rem;
         margin: 2rem 0;
+    }
+
+    .social-media>div>svg{
+        width: 60px;
+        height: 60px;
     }
 
     .social-media svg {
