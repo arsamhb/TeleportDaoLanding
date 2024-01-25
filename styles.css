@@ -1406,7 +1406,6 @@ body::-webkit-scrollbar {
         text-align: center;
     }
 
-
     .section-seven,
     .section-six {
         display: flex;
@@ -1415,7 +1414,6 @@ body::-webkit-scrollbar {
         margin: 0 auto 80px auto;
         height: auto;
     }
-
 
     .tiles-seven,
     .tiles-six {
