@@ -767,18 +767,18 @@ body::-webkit-scrollbar {
     grid-template-rows: 340px 16px 148px 16px 340px;
 }
 
-.tile-img-holder.two > img,
-.tile-img-holder.three > img,
-.tile-img-holder7.one > img,
-.tile-img-holder7.four > img{
+.tile-img-holder.two>img,
+.tile-img-holder.three>img,
+.tile-img-holder7.one>img,
+.tile-img-holder7.four>img {
     max-width: 750px;
     max-height: 221px;
 }
 
-.tile-img-holder7.two > img,
-.tile-img-holder7.three > img,
-.tile-img-holder.one > img,
-.tile-img-holder.four > img{
+.tile-img-holder7.two>img,
+.tile-img-holder7.three>img,
+.tile-img-holder.one>img,
+.tile-img-holder.four>img {
     max-width: 514px;
     max-height: 373px;
 }
@@ -1424,6 +1424,12 @@ body::-webkit-scrollbar {
         align-items: center;
         height: auto;
         margin: 24px 0;
+        gap: 16px;
+    }
+
+    .tiles-seven>div>div>div>img,
+    .tiles-six>div>div>div>img {
+        width: 90vw;
     }
 
     .tile-img-holder.three,
@@ -1441,7 +1447,6 @@ body::-webkit-scrollbar {
     .tiles-h4 {
         color: var(--White, #FFF);
         text-align: center;
-        /* Mobile/Heading/H5 */
         font-family: Outfit;
         font-size: 24px;
         font-style: normal;
