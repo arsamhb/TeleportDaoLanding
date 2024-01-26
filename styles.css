@@ -985,12 +985,18 @@ body::-webkit-scrollbar {
     /* 24px */
     text-decoration-line: underline;
 }
+.gapper-80{
+    height: 80px;
+}
 
 @media only screen and (max-width: 768px) {
     .dont-show-on-phone {
         display: none;
     }
 
+    .gapper-80{
+        height: 0px;
+    }
     .dont-show-on-desktop {
         display: block;
     }
