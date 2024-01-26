@@ -380,6 +380,7 @@ body::-webkit-scrollbar {
 
 .box-border-with-gradient {
     display: grid;
+    place-content: center;
     padding: 1px;
     width: 32%;
     max-width: 32%;
@@ -880,7 +881,7 @@ body::-webkit-scrollbar {
 .social-media {
     display: flex;
     gap: 2rem;
-    margin: 2rem 0;
+    margin: 2rem 0 0 0;
 }
 
 .social-media svg {
@@ -1027,7 +1028,7 @@ body::-webkit-scrollbar {
         margin: 5vw;
         position: fixed;
         width: 90vw;
-        z-index: 10;
+        z-index: 100;
         transition: all 0.3s ease-in-out;
     }
 
@@ -1058,7 +1059,7 @@ body::-webkit-scrollbar {
         width: 100vw;
         height: 100vh;
         background-color: #18181B;
-        z-index: 100;
+        z-index: 110;
         display: flex;
         flex-direction: column;
         padding: 7rem 0 0 0;
@@ -1266,13 +1267,10 @@ body::-webkit-scrollbar {
     }
 
     .box-border-with-gradient {
-        display: grid;
-        padding: 1px;
         width: 100%;
         max-width: 100%;
         min-width: 100%;
-        background: linear-gradient(141deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.15) 100%);
-        border-radius: 8px;
+        height: 283px;
     }
 
     .box {
@@ -1283,6 +1281,7 @@ body::-webkit-scrollbar {
         padding: 1.5rem;
         align-items: center;
         gap: 8px;
+        height: 281px;
         background: linear-gradient(141deg, #060606 0%, #0F0F0F 100%);
         border-radius: 8px;
     }
@@ -1492,7 +1491,10 @@ body::-webkit-scrollbar {
         font-size: 18px;
     }
 
-
+    .section-seven-container {
+        padding-bottom: 16px;
+    }
+    
     .last-section-border-gradient {
         height: auto;
         margin: 64px auto;
@@ -1500,6 +1502,7 @@ body::-webkit-scrollbar {
 
     .last-section {
         padding: 3rem 1.5rem;
+        /* justify-content: space-between; */
     }
 
     .last-section>h5 {
@@ -1523,7 +1526,7 @@ body::-webkit-scrollbar {
     .social-media {
         display: flex;
         gap: 1rem;
-        margin: 2rem 0;
+        margin: 2rem 0 0 0;
     }
 
     .social-media>div>svg {
